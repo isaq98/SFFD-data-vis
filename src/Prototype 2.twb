@@ -1,0 +1,1493 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1219.1533                               -->
+<workbook original-version='18.1' source-build='2018.3.2 (20183.18.1219.1533)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='subset' inline='true' name='federated.1lpsf6n15307so17eu6k416r4z6s' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='subset' name='textscan.0oqen6u0x1ls02125zbk51m141ml'>
+            <connection class='textscan' directory='/Users/samuelescapa/code/usf_code' filename='subset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[subset.csv].[Box]' />
+              <expression op='[Fire_Department_Calls_for_Service.csv].[Box]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0oqen6u0x1ls02125zbk51m141ml' name='subset.csv' table='[subset#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Call Number' ordinal='0' />
+              <column datatype='string' name='Unit ID' ordinal='1' />
+              <column datatype='integer' name='Incident Number' ordinal='2' />
+              <column datatype='string' name='Call Type' ordinal='3' />
+              <column datatype='date' name='Call Date' ordinal='4' />
+              <column datatype='date' name='Watch Date' ordinal='5' />
+              <column datatype='datetime' name='Received DtTm' ordinal='6' />
+              <column datatype='datetime' name='Entry DtTm' ordinal='7' />
+              <column datatype='datetime' name='Dispatch DtTm' ordinal='8' />
+              <column datatype='datetime' name='Response DtTm' ordinal='9' />
+              <column datatype='datetime' name='On Scene DtTm' ordinal='10' />
+              <column datatype='datetime' name='Transport DtTm' ordinal='11' />
+              <column datatype='datetime' name='Hospital DtTm' ordinal='12' />
+              <column datatype='string' name='Call Final Disposition' ordinal='13' />
+              <column datatype='datetime' name='Available DtTm' ordinal='14' />
+              <column datatype='string' name='Address' ordinal='15' />
+              <column datatype='string' name='City' ordinal='16' />
+              <column datatype='integer' name='Zipcode of Incident' ordinal='17' />
+              <column datatype='string' name='Battalion' ordinal='18' />
+              <column datatype='integer' name='Station Area' ordinal='19' />
+              <column datatype='integer' name='Box' ordinal='20' />
+              <column datatype='integer' name='Original Priority' ordinal='21' />
+              <column datatype='integer' name='Priority' ordinal='22' />
+              <column datatype='integer' name='Final Priority' ordinal='23' />
+              <column datatype='boolean' name='ALS Unit' ordinal='24' />
+              <column datatype='string' name='Call Type Group' ordinal='25' />
+              <column datatype='integer' name='Number of Alarms' ordinal='26' />
+              <column datatype='string' name='Unit Type' ordinal='27' />
+              <column datatype='integer' name='Unit sequence in call dispatch' ordinal='28' />
+              <column datatype='integer' name='Fire Prevention District' ordinal='29' />
+              <column datatype='integer' name='Supervisor District' ordinal='30' />
+              <column datatype='string' name='Neighborhooods - Analysis Boundaries' ordinal='31' />
+              <column datatype='string' name='Location' ordinal='32' />
+              <column datatype='string' name='RowID' ordinal='33' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0oqen6u0x1ls02125zbk51m141ml' name='Fire_Department_Calls_for_Service.csv' table='[Fire_Department_Calls_for_Service#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Call Number' ordinal='0' />
+              <column datatype='string' name='Unit ID' ordinal='1' />
+              <column datatype='integer' name='Incident Number' ordinal='2' />
+              <column datatype='string' name='Call Type' ordinal='3' />
+              <column datatype='date' name='Call Date' ordinal='4' />
+              <column datatype='date' name='Watch Date' ordinal='5' />
+              <column datatype='datetime' name='Received DtTm' ordinal='6' />
+              <column datatype='datetime' name='Entry DtTm' ordinal='7' />
+              <column datatype='datetime' name='Dispatch DtTm' ordinal='8' />
+              <column datatype='datetime' name='Response DtTm' ordinal='9' />
+              <column datatype='datetime' name='On Scene DtTm' ordinal='10' />
+              <column datatype='datetime' name='Transport DtTm' ordinal='11' />
+              <column datatype='datetime' name='Hospital DtTm' ordinal='12' />
+              <column datatype='string' name='Call Final Disposition' ordinal='13' />
+              <column datatype='datetime' name='Available DtTm' ordinal='14' />
+              <column datatype='string' name='Address' ordinal='15' />
+              <column datatype='string' name='City' ordinal='16' />
+              <column datatype='integer' name='Zipcode of Incident' ordinal='17' />
+              <column datatype='string' name='Battalion' ordinal='18' />
+              <column datatype='integer' name='Station Area' ordinal='19' />
+              <column datatype='integer' name='Box' ordinal='20' />
+              <column datatype='integer' name='Original Priority' ordinal='21' />
+              <column datatype='integer' name='Priority' ordinal='22' />
+              <column datatype='integer' name='Final Priority' ordinal='23' />
+              <column datatype='boolean' name='ALS Unit' ordinal='24' />
+              <column datatype='string' name='Call Type Group' ordinal='25' />
+              <column datatype='integer' name='Number of Alarms' ordinal='26' />
+              <column datatype='string' name='Unit Type' ordinal='27' />
+              <column datatype='integer' name='Unit sequence in call dispatch' ordinal='28' />
+              <column datatype='integer' name='Fire Prevention District' ordinal='29' />
+              <column datatype='integer' name='Supervisor District' ordinal='30' />
+              <column datatype='string' name='Neighborhooods - Analysis Boundaries' ordinal='31' />
+              <column datatype='string' name='Location' ordinal='32' />
+              <column datatype='string' name='RowID' ordinal='33' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[ALS Unit (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[ALS Unit]' />
+          <map key='[ALS Unit]' value='[subset.csv].[ALS Unit]' />
+          <map key='[Address (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Address]' />
+          <map key='[Address]' value='[subset.csv].[Address]' />
+          <map key='[Available DtTm (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Available DtTm]' />
+          <map key='[Available DtTm]' value='[subset.csv].[Available DtTm]' />
+          <map key='[Battalion (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Battalion]' />
+          <map key='[Battalion]' value='[subset.csv].[Battalion]' />
+          <map key='[Box (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Box]' />
+          <map key='[Box]' value='[subset.csv].[Box]' />
+          <map key='[Call Date (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Call Date]' />
+          <map key='[Call Date]' value='[subset.csv].[Call Date]' />
+          <map key='[Call Final Disposition (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Call Final Disposition]' />
+          <map key='[Call Final Disposition]' value='[subset.csv].[Call Final Disposition]' />
+          <map key='[Call Number (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Call Number]' />
+          <map key='[Call Number]' value='[subset.csv].[Call Number]' />
+          <map key='[Call Type (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Call Type]' />
+          <map key='[Call Type Group (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Call Type Group]' />
+          <map key='[Call Type Group]' value='[subset.csv].[Call Type Group]' />
+          <map key='[Call Type]' value='[subset.csv].[Call Type]' />
+          <map key='[City (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[City]' />
+          <map key='[City]' value='[subset.csv].[City]' />
+          <map key='[Dispatch DtTm (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Dispatch DtTm]' />
+          <map key='[Dispatch DtTm]' value='[subset.csv].[Dispatch DtTm]' />
+          <map key='[Entry DtTm (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Entry DtTm]' />
+          <map key='[Entry DtTm]' value='[subset.csv].[Entry DtTm]' />
+          <map key='[Final Priority (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Final Priority]' />
+          <map key='[Final Priority]' value='[subset.csv].[Final Priority]' />
+          <map key='[Fire Prevention District (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Fire Prevention District]' />
+          <map key='[Fire Prevention District]' value='[subset.csv].[Fire Prevention District]' />
+          <map key='[Hospital DtTm (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Hospital DtTm]' />
+          <map key='[Hospital DtTm]' value='[subset.csv].[Hospital DtTm]' />
+          <map key='[Incident Number (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Incident Number]' />
+          <map key='[Incident Number]' value='[subset.csv].[Incident Number]' />
+          <map key='[Location (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Location]' />
+          <map key='[Location]' value='[subset.csv].[Location]' />
+          <map key='[Neighborhooods - Analysis Boundaries (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Neighborhooods - Analysis Boundaries]' />
+          <map key='[Neighborhooods - Analysis Boundaries]' value='[subset.csv].[Neighborhooods - Analysis Boundaries]' />
+          <map key='[Number of Alarms (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Number of Alarms]' />
+          <map key='[Number of Alarms]' value='[subset.csv].[Number of Alarms]' />
+          <map key='[On Scene DtTm (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[On Scene DtTm]' />
+          <map key='[On Scene DtTm]' value='[subset.csv].[On Scene DtTm]' />
+          <map key='[Original Priority (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Original Priority]' />
+          <map key='[Original Priority]' value='[subset.csv].[Original Priority]' />
+          <map key='[Priority (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Priority]' />
+          <map key='[Priority]' value='[subset.csv].[Priority]' />
+          <map key='[Received DtTm (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Received DtTm]' />
+          <map key='[Received DtTm]' value='[subset.csv].[Received DtTm]' />
+          <map key='[Response DtTm (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Response DtTm]' />
+          <map key='[Response DtTm]' value='[subset.csv].[Response DtTm]' />
+          <map key='[RowID (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[RowID]' />
+          <map key='[RowID]' value='[subset.csv].[RowID]' />
+          <map key='[Station Area (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Station Area]' />
+          <map key='[Station Area]' value='[subset.csv].[Station Area]' />
+          <map key='[Supervisor District (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Supervisor District]' />
+          <map key='[Supervisor District]' value='[subset.csv].[Supervisor District]' />
+          <map key='[Transport DtTm (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Transport DtTm]' />
+          <map key='[Transport DtTm]' value='[subset.csv].[Transport DtTm]' />
+          <map key='[Unit ID (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Unit ID]' />
+          <map key='[Unit ID]' value='[subset.csv].[Unit ID]' />
+          <map key='[Unit Type (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Unit Type]' />
+          <map key='[Unit Type]' value='[subset.csv].[Unit Type]' />
+          <map key='[Unit sequence in call dispatch (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Unit sequence in call dispatch]' />
+          <map key='[Unit sequence in call dispatch]' value='[subset.csv].[Unit sequence in call dispatch]' />
+          <map key='[Watch Date (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Watch Date]' />
+          <map key='[Watch Date]' value='[subset.csv].[Watch Date]' />
+          <map key='[Zipcode of Incident (Fire_Department_Calls_for_Service.csv)]' value='[Fire_Department_Calls_for_Service.csv].[Zipcode of Incident]' />
+          <map key='[Zipcode of Incident]' value='[subset.csv].[Zipcode of Incident]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Call Number]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Call Number</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Unit ID]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Unit ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Incident Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Incident Number]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Incident Number</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Call Type]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Call Type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Call Date]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Call Date</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Watch Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Watch Date]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Watch Date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Received DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Received DtTm]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Received DtTm</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entry DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Entry DtTm]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Entry DtTm</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dispatch DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Dispatch DtTm]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Dispatch DtTm</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Response DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Response DtTm]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Response DtTm</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>On Scene DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[On Scene DtTm]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>On Scene DtTm</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Transport DtTm]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Transport DtTm</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Hospital DtTm]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Hospital DtTm</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Final Disposition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Call Final Disposition]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Call Final Disposition</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Available DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Available DtTm]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Available DtTm</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Address]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Address</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Zipcode of Incident</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Zipcode of Incident]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Zipcode of Incident</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Battalion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Battalion]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Battalion</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Station Area</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Station Area]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Station Area</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Box</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Box]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Box</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Original Priority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Original Priority]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Original Priority</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Priority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Priority]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Priority</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Final Priority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Final Priority]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Final Priority</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ALS Unit</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[ALS Unit]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>ALS Unit</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Type Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Call Type Group]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Call Type Group</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Alarms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Alarms]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Number of Alarms</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Unit Type]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Unit Type</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit sequence in call dispatch</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Unit sequence in call dispatch]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Unit sequence in call dispatch</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fire Prevention District</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fire Prevention District]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Fire Prevention District</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supervisor District</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Supervisor District]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Supervisor District</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Neighborhooods - Analysis Boundaries</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Neighborhooods - Analysis Boundaries]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Neighborhooods - Analysis Boundaries</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RowID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RowID]</local-name>
+            <parent-name>[subset.csv]</parent-name>
+            <remote-alias>RowID</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Call Number (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Call Number</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Unit ID (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Unit ID</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Incident Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Incident Number (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Incident Number</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Call Type (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Call Type</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Call Date (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Call Date</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Watch Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Watch Date (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Watch Date</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Received DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Received DtTm (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Received DtTm</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entry DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Entry DtTm (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Entry DtTm</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dispatch DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Dispatch DtTm (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Dispatch DtTm</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Response DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Response DtTm (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Response DtTm</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>On Scene DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[On Scene DtTm (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>On Scene DtTm</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Transport DtTm (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Transport DtTm</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Hospital DtTm (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Hospital DtTm</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Final Disposition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Call Final Disposition (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Call Final Disposition</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Available DtTm</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Available DtTm (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Available DtTm</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Address (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Address</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Zipcode of Incident</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Zipcode of Incident (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Zipcode of Incident</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Battalion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Battalion (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Battalion</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Station Area</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Station Area (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Station Area</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Box</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Box (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Box</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Original Priority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Original Priority (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Original Priority</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Priority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Priority (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Priority</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Final Priority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Final Priority (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Final Priority</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ALS Unit</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[ALS Unit (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>ALS Unit</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Call Type Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Call Type Group (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Call Type Group</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Alarms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Alarms (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Number of Alarms</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Unit Type (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Unit Type</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit sequence in call dispatch</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Unit sequence in call dispatch (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Unit sequence in call dispatch</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fire Prevention District</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fire Prevention District (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Fire Prevention District</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supervisor District</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Supervisor District (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Supervisor District</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Neighborhooods - Analysis Boundaries</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Neighborhooods - Analysis Boundaries (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Neighborhooods - Analysis Boundaries</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RowID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RowID (Fire_Department_Calls_for_Service.csv)]</local-name>
+            <parent-name>[Fire_Department_Calls_for_Service.csv]</parent-name>
+            <remote-alias>RowID</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='ALS Unit (Fire Department Calls for Service.csv)' datatype='boolean' name='[ALS Unit (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Address (Fire Department Calls for Service.csv)' datatype='string' name='[Address (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Available DtTm (Fire Department Calls for Service.csv)' datatype='datetime' name='[Available DtTm (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Battalion (Fire Department Calls for Service.csv)' datatype='string' name='[Battalion (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Box (Fire Department Calls for Service.csv)' datatype='integer' name='[Box (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column caption='Call Date (Fire Department Calls for Service.csv)' datatype='date' name='[Call Date (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Call Final Disposition (Fire Department Calls for Service.csv)' datatype='string' name='[Call Final Disposition (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Call Number (Fire Department Calls for Service.csv)' datatype='integer' name='[Call Number (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Call Number]' role='dimension' type='ordinal' />
+      <column caption='Call Type (Fire Department Calls for Service.csv)' datatype='string' name='[Call Type (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Call Type Group (Fire Department Calls for Service.csv)' datatype='string' name='[Call Type Group (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='City (Fire Department Calls for Service.csv)' datatype='string' name='[City (Fire_Department_Calls_for_Service.csv)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Dispatch DtTm (Fire Department Calls for Service.csv)' datatype='datetime' name='[Dispatch DtTm (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Entry DtTm (Fire Department Calls for Service.csv)' datatype='datetime' name='[Entry DtTm (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Final Priority (Fire Department Calls for Service.csv)' datatype='integer' name='[Final Priority (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column caption='Fire Prevention District (Fire Department Calls for Service.csv)' datatype='integer' name='[Fire Prevention District (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column caption='Hospital DtTm (Fire Department Calls for Service.csv)' datatype='datetime' name='[Hospital DtTm (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Incident Number (Fire Department Calls for Service.csv)' datatype='integer' name='[Incident Number (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Incident Number]' role='dimension' type='ordinal' />
+      <column caption='Location (Fire Department Calls for Service.csv)' datatype='string' name='[Location (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Neighborhooods - Analysis Boundaries (Fire Department Calls for Service.csv)' datatype='string' name='[Neighborhooods - Analysis Boundaries (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Number of Alarms (Fire Department Calls for Service.csv)' datatype='integer' name='[Number of Alarms (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='On Scene DtTm (Fire Department Calls for Service.csv)' datatype='datetime' name='[On Scene DtTm (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Original Priority (Fire Department Calls for Service.csv)' datatype='integer' name='[Original Priority (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column caption='Priority (Fire Department Calls for Service.csv)' datatype='integer' name='[Priority (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column caption='Received DtTm (Fire Department Calls for Service.csv)' datatype='datetime' name='[Received DtTm (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Response DtTm (Fire Department Calls for Service.csv)' datatype='datetime' name='[Response DtTm (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='RowID (Fire Department Calls for Service.csv)' datatype='string' name='[RowID (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Row ID' datatype='string' name='[RowID]' role='dimension' type='nominal' />
+      <column caption='Station Area (Fire Department Calls for Service.csv)' datatype='integer' name='[Station Area (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column caption='Supervisor District (Fire Department Calls for Service.csv)' datatype='integer' name='[Supervisor District (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column caption='Transport DtTm (Fire Department Calls for Service.csv)' datatype='datetime' name='[Transport DtTm (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Unit ID (Fire Department Calls for Service.csv)' datatype='string' name='[Unit ID (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Unit Type (Fire Department Calls for Service.csv)' datatype='string' name='[Unit Type (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+      <column caption='Unit sequence in call dispatch (Fire Department Calls for Service.csv)' datatype='integer' name='[Unit sequence in call dispatch (Fire_Department_Calls_for_Service.csv)]' role='measure' type='quantitative' />
+      <column caption='Watch Date (Fire Department Calls for Service.csv)' datatype='date' name='[Watch Date (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='ordinal' />
+      <column caption='Zipcode of Incident (Fire Department Calls for Service.csv)' datatype='integer' default-format='*00000' name='[Zipcode of Incident (Fire_Department_Calls_for_Service.csv)]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column datatype='integer' default-format='*00000' name='[Zipcode of Incident]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.556106' measure-ordering='alphabetic' measure-percentage='0.443894' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Type of incidents in 94109'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='subset' name='federated.1lpsf6n15307so17eu6k416r4z6s' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1lpsf6n15307so17eu6k416r4z6s'>
+            <column caption='Call Type (Fire Department Calls for Service.csv)' datatype='string' name='[Call Type (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+            <column caption='Call Type Group (Fire Department Calls for Service.csv)' datatype='string' name='[Call Type Group (Fire_Department_Calls_for_Service.csv)]' role='dimension' type='nominal' />
+            <column caption='Zipcode of Incident (Fire Department Calls for Service.csv)' datatype='integer' default-format='*00000' name='[Zipcode of Incident (Fire_Department_Calls_for_Service.csv)]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column-instance column='[Call Type (Fire_Department_Calls_for_Service.csv)]' derivation='Count' name='[cnt:Call Type (Fire_Department_Calls_for_Service.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Call Type (Fire_Department_Calls_for_Service.csv)]' derivation='None' name='[none:Call Type (Fire_Department_Calls_for_Service.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Call Type Group (Fire_Department_Calls_for_Service.csv)]' derivation='None' name='[none:Call Type Group (Fire_Department_Calls_for_Service.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Zipcode of Incident (Fire_Department_Calls_for_Service.csv)]' derivation='None' name='[none:Zipcode of Incident (Fire_Department_Calls_for_Service.csv):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Zipcode of Incident (Fire_Department_Calls_for_Service.csv):ok]'>
+            <groupfilter function='member' level='[none:Zipcode of Incident (Fire_Department_Calls_for_Service.csv):ok]' member='94108' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Zipcode of Incident (Fire_Department_Calls_for_Service.csv):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Call Type Group (Fire_Department_Calls_for_Service.csv):nk]' />
+              <size column='[federated.1lpsf6n15307so17eu6k416r4z6s].[cnt:Call Type (Fire_Department_Calls_for_Service.csv):qk]' />
+              <text column='[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Call Type (Fire_Department_Calls_for_Service.csv):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='3' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='86000' id='1' name='Type of incidents in 94109' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='12000' id='8' type='text' w='82400' x='800' y='87000'>
+                <formatted-text>
+                  <run>The different types of incidents that happen at each zipcode. The colors represent the type of incident, although most incidents are in an undefined group. We can see that the number of life threatening calls are still a large portion of the total incident calls, while very little are actual fires.</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='15750' id='6' name='Type of incidents in 94109' pane-specification-id='0' param='[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Call Type Group (Fire_Department_Calls_for_Service.csv):nk]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='2750' id='7' name='Type of incidents in 94109' pane-specification-id='0' param='[federated.1lpsf6n15307so17eu6k416r4z6s].[cnt:Incident Number:qk]' type='size' w='16000' x='83200' y='16750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Type of incidents in 94109'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Call Type Group (Fire_Department_Calls_for_Service.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[cnt:Incident Number:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[mi:Dispatch DtTm:ok]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Calculation_1340313504359186432:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Calculation_1340313504359223298:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Calculation_1340313504359264259:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Calculation_1340313504359788549:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Calculation_1340313504359813126:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Calculation_1340313504359845895:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Calculation_1340313504360882184:ok]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Calculation_1340313504360976394:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Call Type (Fire_Department_Calls_for_Service.csv):nk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Call Type Group (Fire_Department_Calls_for_Service.csv):nk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Call Type:nk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Incident Number:ok]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Location:nk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Zipcode of Incident (Fire_Department_Calls_for_Service.csv):ok]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Zipcode of Incident:ok]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[tmi:Dispatch DtTm:qk]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[yr:Dispatch DtTm:ok]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[yr:Entry DtTm:ok]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[yr:On Scene DtTm:ok]</field>
+            <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[yr:Received DtTm:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{62D94082-0514-4F2F-8BDB-EDE052DAE021}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Type of incidents in 94109'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1lpsf6n15307so17eu6k416r4z6s].[none:Call Type Group (Fire_Department_Calls_for_Service.csv):nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{E2B650AC-BE4D-4EF6-BF50-09CA377A6E2C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Type of incidents in 94109' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
